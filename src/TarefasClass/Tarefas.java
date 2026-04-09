@@ -1,5 +1,6 @@
 package TarefasClass;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Tarefas {
@@ -7,18 +8,17 @@ public class Tarefas {
 	String titulo;
 	String descricao;
 	Boolean concluido;
-	LocalDateTime dataCriacao;
-	LocalDateTime dataConcluido;
+	LocalDate dataCriacao;
 	
 	// ==CONSTRUTOR==
 	
-	public Tarefas(String titulo, String descricao, Boolean concluido, LocalDateTime dataCriacao, LocalDateTime dataConcluido) {
+	public Tarefas(String titulo, String descricao, Boolean concluido, LocalDate dataCriacao) {
 		this.titulo = titulo;
 		this.descricao = descricao;
 		this.concluido = concluido;
 		this.dataCriacao = dataCriacao;
-		this.dataConcluido = dataConcluido;
 	}
+
 
 	public String getTitulo() {
 		return titulo;
@@ -42,25 +42,14 @@ public class Tarefas {
 
 	public void setConcluido(Boolean concluido) {
 		this.concluido = concluido;
-		if(concluido) {
-			this.dataConcluido = LocalDateTime.now();
 		}
-	}
 
-	public LocalDateTime getDataCriacao() {
+	public LocalDate getDataCriacao() {
 		return dataCriacao;
 	}
 
-	public void setDataCriacao(LocalDateTime dataCriacao) {
+	public void setDataCriacao(LocalDate dataCriacao) {
 		this.dataCriacao = dataCriacao;
-	}
-	
-	public LocalDateTime getDataConcluido() {
-		return dataConcluido;
-	}
-	
-	public void setDataConcluido(LocalDateTime dataConcluido) {
-		this.dataConcluido = dataConcluido;
 	}
 	
 	// ==MÉTODOS== 
