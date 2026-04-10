@@ -51,6 +51,7 @@ public class Tarefas {
 	public void setDataCriacao(LocalDate dataCriacao) {
 		this.dataCriacao = dataCriacao;
 	}
+
 	
 	// ==MÉTODOS== 
 }
